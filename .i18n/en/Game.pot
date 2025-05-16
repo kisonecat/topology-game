@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Apr 10 15:31:40 2024\n"
+"POT-Creation-Date: Fri May 16 18:58:17 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,62 +20,54 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
+#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
+msgid "Your First Space"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
+#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
 msgid "This text is shown as first message when the level is played.\n"
 "You can insert hints in the proof below. They will appear in this side panel\n"
 "depending on the proof a user provides."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using `«{h}»` or `«{g}»`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{h}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{g}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
+#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
 msgid "This last message appears if the level is solved."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
+msgid "some description"
 msgstr ""
 
-#: Game.Levels.DemoWorld
+#: Game.Levels.SpaceWorld
+msgid "Space World"
+msgstr ""
+
+#: Game.Levels.SpaceWorld
 msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
 msgstr ""
 
 #: Game
-msgid "Hello World Game"
+msgid "Topology Game"
 msgstr ""
 
 #: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use markdown."
+msgid "Welcome to the Topology Game! During this game, you will\n"
+"learn an introduction to the Lean theorem prover in the context\n"
+"of introductory topology."
 msgstr ""
 
 #: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
+msgid "This game is a work in progress.\n"
 "\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"(c) 2025 Steven Clontz and Jim Fowler\n"
 "\n"
-"Use markdown."
+"<https://github.com/kisonecat/topology-game>"
 msgstr ""
 
 #: Game
-msgid "Game Template"
+msgid "Topology Game"
 msgstr ""
 
 #: Game
-msgid "You should use this game as a template for your own game and add your own levels."
+msgid "An introduction to Lean using topology."
 msgstr ""

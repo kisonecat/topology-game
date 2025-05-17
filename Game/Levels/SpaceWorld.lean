@@ -2,6 +2,7 @@ import Game.Levels.SpaceWorld.L01
 import Game.Levels.SpaceWorld.L02
 import Game.Levels.SpaceWorld.L03
 import Game.Levels.SpaceWorld.L04
+import Game.Levels.SpaceWorld.L05
 
 World "SpaceWorld"
 Title "Space World"

@@ -13,7 +13,7 @@ open Set Topology Nat
 
 variable {X : Type}
 
-NewTactic induction' simp
+NewTactic induction' simp rw
 
 /--
 Splits up an intersection over a successor ordinal into a binary
@@ -47,11 +47,11 @@ Statement (h: TopologicalSpace X) (n : ℕ) (U: ℕ → Set X)
   simp
   Hint "
   Now here, `simp` is not smart enough to prove this case for us.
-  However, we can use the `biInter_lt_succ` lemma to simplify the goal
+  However, we can use the `biInter_lt_succ` lemma to `rewrite` the goal
   into a binary intersection which we can handle given our induction hypothesis.
-  Try `simp [biInter_lt_succ]` to see how this works.
+  Try `rw [biInter_lt_succ]` to see how this works.
   "
-  simp [biInter_lt_succ]
+  rw [biInter_lt_succ]
   Hint "
   Remember how to turn a goal asking to prove that the binary intersection of
   two sets is open into a goal asking to prove that each of the two sets

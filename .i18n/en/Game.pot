@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat May 17 03:16:53 2025\n"
+"POT-Creation-Date: Sat May 17 22:20:13 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -143,9 +143,9 @@ msgstr ""
 
 #: Game.Levels.SpaceWorld.L04
 msgid "Now here, `simp` is not smart enough to prove this case for us.\n"
-"However, we can use the `biInter_lt_succ` lemma to simplify the goal\n"
+"However, we can use the `biInter_lt_succ` lemma to `rewrite` the goal\n"
 "into a binary intersection which we can handle given our induction hypothesis.\n"
-"Try `simp [biInter_lt_succ]` to see how this works."
+"Try `rw [biInter_lt_succ]` to see how this works."
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L04
@@ -164,6 +164,58 @@ msgid "Here we can `apply` the hypothesis `U_open`, or we could note that\n"
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L04
+msgid "Awesome job!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "The Final Axiom"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "Finally, we have `h.isOpen_sUnion`: the arbitrary union of open sets is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "By definition, the union of any family of open sets is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "Proof that `⋃₀ \\{U, V} = U ∪ V`."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "So of course, a finite union of open sets should be open. To convince\n"
+"Lean of this, we will need to first convert this binary union `U ∪ V` into the union\n"
+"of a set: `⋃₀ {U, V}`."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "The fact that `⋃₀ {U, V} = U ∪ V` is captured by `sUnion_pair U V`, but the\n"
+"rewrite (`rw`) tactic only tries to rewrite expressions on the left side of the `=`\n"
+"with expressions on the right. This can be fixed by using `rw [← sUnion_pair U V]`.\n"
+"(To type the `←`, type `\\l` and press space.)"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "Now we can apply the union axiom for topological spaces."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "Logically, we can see that we need to check two cases,\n"
+"$t=U$ and $t=V$. One way to do this in lean is the `rintro`\n"
+"tactic. Use `rintro t (rfl | rfl)` to split your goal into\n"
+"these cases."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "Here we prove the case $t=U$."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
+msgid "And here we prove the case $t=V$."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L05
 msgid "Awesome job!"
 msgstr ""
 

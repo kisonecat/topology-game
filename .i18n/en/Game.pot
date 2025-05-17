@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat May 17 03:06:19 2025\n"
+"POT-Creation-Date: Sat May 17 03:16:53 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -115,13 +115,52 @@ msgid "We could now prove `IsOpen (U ∩ V ∩ W ∩ S)`, but the smarter play\n
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L04
-msgid "By definition, the intersection of two open sets is open."
+msgid "Splits up an intersection over a successor ordinal into a binary\n"
+"intersection of with the last element and the rest of the intersection."
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L04
 msgid "Informally, in this scenario we have $n \\in \\mathbb{N}$,\n"
 "and open sets $U_n$ is open for all $n \\in \\mathbb{N}$.\n"
 "We wish to prove that $\\bigcap_{m\\leq n} U_m$ is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "To prove this, we will need to use induction. This is possible\n"
+"using mathlib's `induction'` tactic. (There is also an `induction` tactic,\n"
+"but this variation allows for a cleaner proof.) Try using\n"
+"`induction' n with n hn` to split your goal into a base case and\n"
+"a successor case."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "This base case is trivial, but would be tedious to work through explicitly.\n"
+"Fortunately, we can use the `simp` tactic to help us out. Just run `simp`\n"
+"and Lean will automatically prove the base case for us by realizing this\n"
+"is an intersection over an empty collection, which is equal to `univ`,\n"
+"which is always open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Now here, `simp` is not smart enough to prove this case for us.\n"
+"However, we can use the `biInter_lt_succ` lemma to simplify the goal\n"
+"into a binary intersection which we can handle given our induction hypothesis.\n"
+"Try `simp [biInter_lt_succ]` to see how this works."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Remember how to turn a goal asking to prove that the binary intersection of\n"
+"two sets is open into a goal asking to prove that each of the two sets\n"
+"is open?"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "This is exactly our induction hypothesis, which we named `hn`."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Here we can `apply` the hypothesis `U_open`, or we could note that\n"
+"this is `exact`ly `U_open` for `n`, that is, `exact U_open n`."
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L04

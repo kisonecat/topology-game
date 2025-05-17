@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri May 16 18:58:17 2025\n"
+"POT-Creation-Date: Sat May 17 03:06:19 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,22 +20,112 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
-msgid "Your First Space"
+#: Game.Levels.SpaceWorld.L01
+msgid "The Universal Axiom"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+#: Game.Levels.SpaceWorld.L01
+msgid "In mathematics, a `TopologicalSpace` is a `Set` paired\n"
+"with a family of \"open subsets\". This family, called a topology,\n"
+"must satisfy three axioms. The first is that the entire set itself\n"
+"must be an open subset."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
-msgid "This last message appears if the level is solved."
+#: Game.Levels.SpaceWorld.L01
+msgid "By definition, the universe `univ` is always open in a topological\n"
+"space."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01_TheStartingAxioms
-msgid "some description"
+#: Game.Levels.SpaceWorld.L01
+msgid "There's nothing to prove here. `IsOpen univ` is `exact`ly the\n"
+"first axiom of `X` being a topological space.\n"
+"\n"
+"To say this in Lean, write `exact h.isOpen_univ`. The `exact`\n"
+"tactic says that the goal is exactly a known fact. Our hypothesis\n"
+"`h` is that `X` is a topological space, and `h.isOpen_univ`\n"
+"specifically says that the universe of this topological space is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L01
+msgid "Great first proof!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "The Intersection Axiom"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "The next axiom of topological spaces is that\n"
+"every pair of open sets must have an open intersection."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "By definition, the intersection of two open sets is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "Again, we have little to prove here: this should just be\n"
+"intersection axiom. The way this theorem is stated\n"
+"in Lean is a little different than the way it's expressed here, however.\n"
+"(Try typing `exact h.isOpen_inter` and see what happens!)\n"
+"\n"
+"So it's not `exact`ly the same, but `h.isOpen_inter` is certainly still\n"
+"applicable! In fact, we can use the `apply` tactic here rather than\n"
+"`exact`..."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "Great! By `apply`ing `h.isOpen_inter`, you've reduced our goal to show\n"
+"`IsOpen (U ∩ V)` into two subgoals. The first subgoal is `IsOpen U`, which\n"
+"is `exact`ly one of our hypotheses..."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "And the second subgoal is also a given hypothesis."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L02
+msgid "Good work!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L03
+msgid "Proving Something New!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L03
+msgid "Of course, if the intersection of two opens must be open,\n"
+"we should be able to prove three open sets have open intersection."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L03
+msgid "You should be able to do this with two `apply`s and three `exact`s."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L03
+msgid "Awesome job!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Inductive Arguments"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "We could now prove `IsOpen (U ∩ V ∩ W ∩ S)`, but the smarter play\n"
+"is to prove any finite intersection is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "By definition, the intersection of two open sets is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Informally, in this scenario we have $n \\in \\mathbb{N}$,\n"
+"and open sets $U_n$ is open for all $n \\in \\mathbb{N}$.\n"
+"We wish to prove that $\\bigcap_{m\\leq n} U_m$ is open."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L04
+msgid "Awesome job!"
 msgstr ""
 
 #: Game.Levels.SpaceWorld

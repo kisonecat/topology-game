@@ -2,6 +2,9 @@ import GameServer.Commands
 
 import Mathlib.Tactic.Common
 import Mathlib.Topology.Defs.Basic
+import Init.Data.List.Basic
+import Mathlib.Data.Set.Lattice
+import Mathlib.Data.Nat.Lattice
 
 /-! Use this file to add things that should be available in all levels.
 

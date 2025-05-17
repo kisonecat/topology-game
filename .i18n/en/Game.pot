@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat May 17 22:20:13 2025\n"
+"POT-Creation-Date: Sat May 17 22:48:35 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -168,7 +168,7 @@ msgid "Awesome job!"
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L05
-msgid "The Final Axiom"
+msgid "The Union Axiom"
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L05
@@ -216,6 +216,38 @@ msgid "And here we prove the case $t=V$."
 msgstr ""
 
 #: Game.Levels.SpaceWorld.L05
+msgid "Awesome job!"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "An Empty Feeling"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "You might think we forgot a common \"axiom\" of topological\n"
+"spaces: the empty set must always be open. But in fact, this\n"
+"is guaranteed by the other three axioms."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "Proof that `⋃₀ ∅ = ∅`."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "You can use `sUnion_empty` to rewrite this goal into a goal\n"
+"that can be addressed by one of the three axioms."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "Now apply the right topological axiom."
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
+msgid "Hmm, this seems rather trivial! Maybe lean can knock this out\n"
+"with one word?"
+msgstr ""
+
+#: Game.Levels.SpaceWorld.L06
 msgid "Awesome job!"
 msgstr ""
 

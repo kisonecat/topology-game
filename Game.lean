@@ -1,4 +1,4 @@
-import Game.Levels.SpaceWorld
+import Game.Levels.W01.SpaceWorld
 
 -- Here's what we'll put on the title screen
 Title "Topology Game"

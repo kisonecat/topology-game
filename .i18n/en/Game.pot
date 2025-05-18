@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat May 17 22:48:35 2025\n"
+"POT-Creation-Date: Sun May 18 21:45:08 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,243 +20,242 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01
+#: Game.Levels.W01.L01
 msgid "The Universal Axiom"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01
+#: Game.Levels.W01.L01
 msgid "In mathematics, a `TopologicalSpace` is a `Set` paired\n"
 "with a family of \"open subsets\". This family, called a topology,\n"
 "must satisfy three axioms. The first is that the entire set itself\n"
 "must be an open subset."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01
+#: Game.Levels.W01.L01
 msgid "By definition, the universe `univ` is always open in a topological\n"
 "space."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01
+#: Game.Levels.W01.L01
 msgid "There's nothing to prove here. `IsOpen univ` is `exact`ly the\n"
 "first axiom of `X` being a topological space.\n"
 "\n"
-"To say this in Lean, write `exact h.isOpen_univ`. The `exact`\n"
-"tactic says that the goal is exactly a known fact. Our hypothesis\n"
-"`h` is that `X` is a topological space, and `h.isOpen_univ`\n"
-"specifically says that the universe of this topological space is open."
+"To say this in Lean, write `exact isOpen_univ`. The `exact`\n"
+"tactic says that the goal is exactly a known fact. Then `isOpen_univ`\n"
+"specifically says that the universe of a topological space is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L01
+#: Game.Levels.W01.L01
 msgid "Great first proof!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
+#: Game.Levels.W01.L02
 msgid "The Intersection Axiom"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
+#: Game.Levels.W01.L02
 msgid "The next axiom of topological spaces is that\n"
 "every pair of open sets must have an open intersection."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
+#: Game.Levels.W01.L02
 msgid "By definition, the intersection of two open sets is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
+#: Game.Levels.W01.L02
 msgid "Again, we have little to prove here: this should just be\n"
 "intersection axiom. The way this theorem is stated\n"
 "in Lean is a little different than the way it's expressed here, however.\n"
-"(Try typing `exact h.isOpen_inter` and see what happens!)\n"
+"(Try typing `exact IsOpen.inter` and see what happens!)\n"
 "\n"
-"So it's not `exact`ly the same, but `h.isOpen_inter` is certainly still\n"
+"So it's not `exact`ly the same, but `IsOpen.inter` is certainly still\n"
 "applicable! In fact, we can use the `apply` tactic here rather than\n"
 "`exact`..."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
-msgid "Great! By `apply`ing `h.isOpen_inter`, you've reduced our goal to show\n"
-"`IsOpen (U ∩ V)` into two subgoals. The first subgoal is `IsOpen U`, which\n"
-"is `exact`ly one of our hypotheses..."
+#: Game.Levels.W01.L02
+msgid "Great! By `apply`ing `IsOpen.inter`, you've reduced our goal of\n"
+"`IsOpen (U ∩ V)` into two subgoals, which are `exact`ly our\n"
+"two assumptions `U_open` and `V_open`.\n"
+"So use two `exact` statements to complete\n"
+"this proof."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L02
-msgid "And the second subgoal is also a given hypothesis."
-msgstr ""
-
-#: Game.Levels.SpaceWorld.L02
+#: Game.Levels.W01.L02
 msgid "Good work!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L03
+#: Game.Levels.W01.L03
 msgid "Proving Something New!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L03
+#: Game.Levels.W01.L03
 msgid "Of course, if the intersection of two opens must be open,\n"
 "we should be able to prove three open sets have open intersection."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L03
+#: Game.Levels.W01.L03
 msgid "You should be able to do this with two `apply`s and three `exact`s."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L03
+#: Game.Levels.W01.L03
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "Inductive Arguments"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "We could now prove `IsOpen (U ∩ V ∩ W ∩ S)`, but the smarter play\n"
 "is to prove any finite intersection is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "Splits up an intersection over a successor ordinal into a binary\n"
 "intersection of with the last element and the rest of the intersection."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "Informally, in this scenario we have $n \\in \\mathbb{N}$,\n"
-"and open sets $U_n$ is open for all $n \\in \\mathbb{N}$.\n"
-"We wish to prove that $\\bigcap_{m\\leq n} U_m$ is open."
+"and open sets $U_n$ for all $n \\in \\mathbb{N}$.\n"
+"We wish to prove that $\\bigcap_{m<n} U_m$ is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "To prove this, we will need to use induction. This is possible\n"
 "using mathlib's `induction'` tactic. (There is also an `induction` tactic,\n"
 "but this variation allows for a cleaner proof.) Try using\n"
-"`induction' n with n hn` to split your goal into a base case and\n"
+"`induction' n with n ind_hyp` to split your goal into a base case and\n"
 "a successor case."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
-msgid "This base case is trivial, but would be tedious to work through explicitly.\n"
-"Fortunately, we can use the `simp` tactic to help us out. Just run `simp`\n"
-"and Lean will automatically prove the base case for us by realizing this\n"
-"is an intersection over an empty collection, which is equal to `univ`,\n"
+#: Game.Levels.W01.L04
+msgid "This base case $\\bigcap_{m<0} U_m$ is trivial, which is a great\n"
+"opportunity to show off mathlib's `simp` tactic. Just run `simp`\n"
+"and Lean will automatically prove this trivial base case for us by\n"
+"realizing $\\bigcap_{m<0} U_m$\n"
+"is an intersection over an empty collection, and is thus equal to `univ`,\n"
 "which is always open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
-msgid "Now here, `simp` is not smart enough to prove this case for us.\n"
-"However, we can use the `biInter_lt_succ` lemma to `rewrite` the goal\n"
+#: Game.Levels.W01.L04
+msgid "Now here, `simp` is not smart enough to prove this case for us (try it).\n"
+"However, we can use the `biInter_lt_succ` lemma that\n"
+"$\\bigcap_{m<n+1} U_m = (\\bigcap_{m<n} U_m) \\cap U_n$ to `rewrite` the goal\n"
 "into a binary intersection which we can handle given our induction hypothesis.\n"
 "Try `rw [biInter_lt_succ]` to see how this works."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
-msgid "Remember how to turn a goal asking to prove that the binary intersection of\n"
-"two sets is open into a goal asking to prove that each of the two sets\n"
-"is open?"
+#: Game.Levels.W01.L04
+msgid "Now we can `apply` the basic fact that the intersection of two open sets is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
-msgid "This is exactly our induction hypothesis, which we named `hn`."
+#: Game.Levels.W01.L04
+msgid "This is exactly our induction hypothesis, which we named `ind_hyp`."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "Here we can `apply` the hypothesis `U_open`, or we could note that\n"
-"this is `exact`ly `U_open` for `n`, that is, `exact U_open n`."
+"this is `exact`ly `U_open` for the value of `n`, that is, `exact U_open n`."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L04
+#: Game.Levels.W01.L04
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "The Union Axiom"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
-msgid "Finally, we have `h.isOpen_sUnion`: the arbitrary union of open sets is open."
+#: Game.Levels.W01.L05
+msgid "Finally, we have `isOpen_sUnion`: the arbitrary union of open sets is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "By definition, the union of any family of open sets is open."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "Proof that `⋃₀ \\{U, V} = U ∪ V`."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "So of course, a finite union of open sets should be open. To convince\n"
 "Lean of this, we will need to first convert this binary union `U ∪ V` into the union\n"
 "of a set: `⋃₀ {U, V}`."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
-msgid "The fact that `⋃₀ {U, V} = U ∪ V` is captured by `sUnion_pair U V`, but the\n"
+#: Game.Levels.W01.L05
+msgid "The fact that $\\bigcup \\{U, V\\} = U \\cup V$ is captured by `sUnion_pair U V`, but the\n"
 "rewrite (`rw`) tactic only tries to rewrite expressions on the left side of the `=`\n"
-"with expressions on the right. This can be fixed by using `rw [← sUnion_pair U V]`.\n"
+"with expressions on the right. This can be handled by using `rw [← sUnion_pair U V]`\n"
+"rather than `rw [sUnionpair U V]`.\n"
 "(To type the `←`, type `\\l` and press space.)"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "Now we can apply the union axiom for topological spaces."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "Logically, we can see that we need to check two cases,\n"
-"$t=U$ and $t=V$. One way to do this in lean is the `rintro`\n"
+"$t=U$ and $t=V$. One way to do this in Lean is the `rintro`\n"
 "tactic. Use `rintro t (rfl | rfl)` to split your goal into\n"
 "these cases."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "Here we prove the case $t=U$."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "And here we prove the case $t=V$."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L05
+#: Game.Levels.W01.L05
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "An Empty Feeling"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "You might think we forgot a common \"axiom\" of topological\n"
 "spaces: the empty set must always be open. But in fact, this\n"
 "is guaranteed by the other three axioms."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "Proof that `⋃₀ ∅ = ∅`."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "You can use `sUnion_empty` to rewrite this goal into a goal\n"
 "that can be addressed by one of the three axioms."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "Now apply the right topological axiom."
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
-msgid "Hmm, this seems rather trivial! Maybe lean can knock this out\n"
+#: Game.Levels.W01.L06
+msgid "Hmm, this seems rather trivial! Maybe Lean can knock this out\n"
 "with one word?"
 msgstr ""
 
-#: Game.Levels.SpaceWorld.L06
+#: Game.Levels.W01.L06
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.SpaceWorld
+#: Game.Levels.W01.SpaceWorld
 msgid "Space World"
 msgstr ""
 
-#: Game.Levels.SpaceWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+#: Game.Levels.W01.SpaceWorld
+msgid "Let's get started by exploring the three basic axioms for\n"
+"topological spaces."
 msgstr ""
 
 #: Game

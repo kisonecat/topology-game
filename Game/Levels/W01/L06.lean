@@ -18,9 +18,9 @@ NewTheorem Set.sUnion_empty
 
 open Set Topology Nat
 
-variable {X : Type}
+variable {X : Type} [TopologicalSpace X]
 
-Statement (h: TopologicalSpace X) : IsOpen (∅: Set X) := by
+Statement : IsOpen (∅: Set X) := by
   Hint "
   You can use `sUnion_empty` to rewrite this goal into a goal
   that can be addressed by one of the three axioms.
@@ -29,9 +29,9 @@ Statement (h: TopologicalSpace X) : IsOpen (∅: Set X) := by
   Hint "
   Now apply the right topological axiom.
   "
-  apply h.isOpen_sUnion
+  apply isOpen_sUnion
   Hint "
-  Hmm, this seems rather trivial! Maybe lean can knock this out
+  Hmm, this seems rather trivial! Maybe Lean can knock this out
   with one word?
   "
   simp

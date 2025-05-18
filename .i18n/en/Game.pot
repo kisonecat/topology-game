@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun May 18 21:45:08 2025\n"
+"POT-Creation-Date: Sun May 18 22:22:08 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -206,11 +206,8 @@ msgid "Logically, we can see that we need to check two cases,\n"
 msgstr ""
 
 #: Game.Levels.W01.L05
-msgid "Here we prove the case $t=U$."
-msgstr ""
-
-#: Game.Levels.W01.L05
-msgid "And here we prove the case $t=V$."
+msgid "This allows us to first prove the case $t=U$,\n"
+"and then prove the case $t=V$."
 msgstr ""
 
 #: Game.Levels.W01.L05
@@ -249,13 +246,34 @@ msgstr ""
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.W01.SpaceWorld
-msgid "Space World"
+#: Game.Levels.W01.AxiomWorld
+msgid "Axiom World"
 msgstr ""
 
-#: Game.Levels.W01.SpaceWorld
+#: Game.Levels.W01.AxiomWorld
 msgid "Let's get started by exploring the three basic axioms for\n"
-"topological spaces."
+"topological axioms."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "A Very Simple Example"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "foo"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Great first proof!"
+msgstr ""
+
+#: Game.Levels.W02.ExampleWorld
+msgid "Example World"
+msgstr ""
+
+#: Game.Levels.W02.ExampleWorld
+msgid "Now let's try actually constructing some examples of\n"
+"topological spaces!"
 msgstr ""
 
 #: Game

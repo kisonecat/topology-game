@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "SpaceWorld"
+World "AxiomWorld"
 Level 5
 Title "The Union Axiom"
 

@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "SpaceWorld"
+World "AxiomWorld"
 Level 1
 Title "The Universal Axiom"
 

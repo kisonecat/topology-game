@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun May 18 21:45:08 2025\n"
+"POT-Creation-Date: Thu May 22 18:17:07 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -206,11 +206,8 @@ msgid "Logically, we can see that we need to check two cases,\n"
 msgstr ""
 
 #: Game.Levels.W01.L05
-msgid "Here we prove the case $t=U$."
-msgstr ""
-
-#: Game.Levels.W01.L05
-msgid "And here we prove the case $t=V$."
+msgid "This allows us to first prove the case $t=U$,\n"
+"and then prove the case $t=V$."
 msgstr ""
 
 #: Game.Levels.W01.L05
@@ -249,13 +246,217 @@ msgstr ""
 msgid "Awesome job!"
 msgstr ""
 
-#: Game.Levels.W01.SpaceWorld
-msgid "Space World"
+#: Game.Levels.W01.AxiomWorld
+msgid "Axiom World"
 msgstr ""
 
-#: Game.Levels.W01.SpaceWorld
+#: Game.Levels.W01.AxiomWorld
 msgid "Let's get started by exploring the three basic axioms for\n"
-"topological spaces."
+"topological axioms."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "A (The) Trivial Example"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Our first task in this world is to prove that\n"
+"topological spaces exist in the first place! And\n"
+"what better place to start by showing that the\n"
+"indiscrete/trivial topology is a topology on any set?"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "yada yada"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "yada yada"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "yada yada"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Our goal is just `TopologicalSpace X`: there exists a\n"
+"topology on $X$. To do this directly, we will need to\n"
+"`apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)`.\n"
+"Here, `U = ∅ ∨ U = univ` prepresents the requirements for a set to\n"
+"be open, namely, it should equal the empty set or the universe.\n"
+"(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We now have three goals. The first of these is to verify that\n"
+"our condition `U = ∅ ∨ U = univ` for `U` being open guarantees that the\n"
+"universe will be open, that is, `univ = ∅ ∨ univ = univ`."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "In Lean, proving a disjunction (\"or\") statement can be accomplished by\n"
+"the `right` and `left` tactics. Choosing `right` will reduce this goal to\n"
+"proving the right side of the disjunction, and choosing `left` will, well,\n"
+"you probably get it. Which one can we verify?"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Seems pretty `simp`le to me. (Actually, we could have used `simp` in the\n"
+"previous step, and Lean would have verified this out for us as well!)"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "This long goal is asking us to verify the finite intersection axiom.\n"
+"Just as we did in the previous world, we can prove a statement with a\n"
+"universal quantifier and various hypotheses by using `rintro`. Let's\n"
+"start by calling our open sets `U` and `V` with `rintro U V`."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We now need to prove a statement of the form `P → R → Q`, that is,\n"
+"\"If $U$ is open, then if $V$ is open, then $U\\cap V$ is open\".\n"
+"Since each assertion that a set is open is a disjunction of two conditions\n"
+"(either the set is `∅` or `univ`), we have four cases to check."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "One way to do this is to use `rintro (g|g) (h|h)`, which sets `g` to\n"
+"be either `U = ∅` or `U = univ`, and sets `h` to be either `V = ∅`\n"
+"or `V = ∅`. (If we wanted, we could have used `rintro U V (g|g) (h|h)`\n"
+"at the previous step to do this all at once.)"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We now need to prove `U ∩ V = ∅ ∨ U ∩ V = univ` for each of\n"
+"the four cases. This can be accomplished by `r`e`w`riting the goal\n"
+"to substitute `∅` and `univ` appropriately into the goal. In every\n"
+"case, it's pretty `simp`le for Lean to wrap things up for us."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "(If doing this four times seems tedious, don't worry; there is Lean\n"
+"magic that could have been used to make this more efficient, but we're\n"
+"gonna stick to the basics for now.)"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Finally, we must verify the union axiom. Let's `rintro`duce `U_col`\n"
+"as our collection of sets, and `U_col_open` as the assumption each set\n"
+"in the collection is open."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Lean can `simp`lify things here: a union is only empty in the case that\n"
+"every set in the collection is empty."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Here, we cannot proceed with `right` or `left`, because\n"
+"we don't know which condition is satisfied for our `U_col`.\n"
+"So here we will use `by_cases h : ∀ s ∈ U_col, s = ∅`\n"
+"to split our goal into two cases."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Here our `h` is `exact`ly the `left` side of our\n"
+"disjunction."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Now `h` tells us the `left` side cannot hold,\n"
+"so we should move to the `right`."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "The negation of a universal quantifier is an\n"
+"existential statement. `simp at h` will tell Lean\n"
+"to reveal this for us."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We want now to deconstruct this `h` to give us\n"
+"an open set `V` which belongs to `U_col` where\n"
+"`¬V = ∅`. The tactic\n"
+"`obtain ⟨V, V_in_U_col, V_not_empty⟩ := h` does the trick.\n"
+"(To type e.g. `⟨`, use `\\<`.)"
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Logically, we know that if `V` is not the empty set,\n"
+"then it must be `univ`. In Lean-speak, this means we should\n"
+"`have V_univ : V = univ := ?_`."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Now we're ready to `r`e`w`rite our goal using\n"
+"`eq_univ_iff_forall`, which is a useful characterization\n"
+"for when a set equals the universe."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Here we can `rintro`duce an arbitrary point\n"
+"$x\\in X$."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Lean can now `simp`lify our goal for us."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Finally, let's `use` the set `V`."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We now need to prove a conjunction of\n"
+"`V ∈ U_col` and `x ∈ V`. We can use the\n"
+"`constructor` tactic to split this into two\n"
+"subgoals."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "This is `exact`ly one of our hypotheses."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "We should `r`e`w`rite our goal to remind Lean\n"
+"what `V` is."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "And Lean can handle the rest with our favorite\n"
+"four-character tactic..."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Recall that earlier we claimed that\n"
+"`V = univ`? It's now our job to justify it.\n"
+"This is almost `U_col_open V V_in_U_col`, which says\n"
+"`V = ∅ ∨ V = univ`. So let's use `rcases U_col_open V V_in_U_col`\n"
+"to investigate each case."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Wait a second! In this case, we have both\n"
+"`V_empty` and `V_not_empty`. This is `absurd`,\n"
+"and Lean will agree if we assert `exact absurd`\n"
+"along with these two contradictory hypotheses."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "And this is `exact`ly our second case."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "Whew, you did it!"
+msgstr ""
+
+#: Game.Levels.W02.ExampleWorld
+msgid "Example World"
+msgstr ""
+
+#: Game.Levels.W02.ExampleWorld
+msgid "Now let's try actually constructing some examples of\n"
+"topological spaces!"
 msgstr ""
 
 #: Game

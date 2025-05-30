@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu May 22 18:17:07 2025\n"
+"POT-Creation-Date: Fri May 30 15:56:54 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -283,8 +283,12 @@ msgid "Our goal is just `TopologicalSpace X`: there exists a\n"
 "topology on $X$. To do this directly, we will need to\n"
 "`apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)`.\n"
 "Here, `U = ∅ ∨ U = univ` prepresents the requirements for a set to\n"
-"be open, namely, it should equal the empty set or the universe.\n"
-"(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)"
+"be open, namely, it should equal the empty set or the universe."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)\n"
+"(To type `↦`, type `\\mapsto` and then `[Space]` to autocomplete.)"
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -384,7 +388,8 @@ msgstr ""
 #: Game.Levels.W02.L01
 msgid "Logically, we know that if `V` is not the empty set,\n"
 "then it must be `univ`. In Lean-speak, this means we should\n"
-"`have V_univ : V = univ := ?_`."
+"`have V_univ : V = univ := ?_` (where `?_` means we promise to\n"
+"eventually provide a proof)."
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -431,7 +436,8 @@ msgstr ""
 msgid "Recall that earlier we claimed that\n"
 "`V = univ`? It's now our job to justify it.\n"
 "This is almost `U_col_open V V_in_U_col`, which says\n"
-"`V = ∅ ∨ V = univ`. So let's use `rcases U_col_open V V_in_U_col`\n"
+"`V = ∅ ∨ V = univ`. So let's use\n"
+"`rcases U_col_open V V_in_U_col with V_empty|V_univ`\n"
 "to investigate each case."
 msgstr ""
 
@@ -457,6 +463,28 @@ msgstr ""
 #: Game.Levels.W02.ExampleWorld
 msgid "Now let's try actually constructing some examples of\n"
 "topological spaces!"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "Mapping out of the discrete"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "Our first task is to prove that every function\n"
+"from a *discrete* topological space to a topological space\n"
+"is continuous."
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "You did it!"
+msgstr ""
+
+#: Game.Levels.W03.ContinuityWorld
+msgid "Continuity World"
+msgstr ""
+
+#: Game.Levels.W03.ContinuityWorld
+msgid "Let's build maps between topological spaces."
 msgstr ""
 
 #: Game

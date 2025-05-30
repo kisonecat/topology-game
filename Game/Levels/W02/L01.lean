@@ -19,7 +19,7 @@ TheoremDoc TopologicalSpace.mk as "TopologicalSpace.mk" in "Topology"
 TheoremDoc Set.eq_univ_iff_forall as "eq_univ_iff_forall" in "Set"
 NewTheorem TopologicalSpace.mk Set.eq_univ_iff_forall absurd
 
-NewTactic right left by_cases obtain «have»
+NewTactic right left by_cases obtain «have» use
 
 open Set Topology
 variable {X : Type}
@@ -31,7 +31,10 @@ Statement : TopologicalSpace X := by
   `apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)`.
   Here, `U = ∅ ∨ U = univ` prepresents the requirements for a set to
   be open, namely, it should equal the empty set or the universe.
+  "
+  Hint "
   (To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)
+  (To type `↦`, type `\\mapsto` and then `[Space]` to autocomplete.)
   "
   apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)
   · Hint "
@@ -136,13 +139,15 @@ Statement : TopologicalSpace X := by
       Hint "
       Logically, we know that if `V` is not the empty set,
       then it must be `univ`. In Lean-speak, this means we should
-      `have V_univ : V = univ := ?_`.
+      `have V_univ : V = univ := ?_` (where `:= ?_` means we promise to
+      eventually provide a proof).
       "
       have V_univ : V = univ := ?_
       · Hint "
         Now we're ready to `r`e`w`rite our goal using
         `eq_univ_iff_forall`, which is a useful characterization
-        for when a set equals the universe.
+        for when a set equals the universe:
+        `S = univ ↔ ∀ (x : X), x ∈ S`.
         "
         rw [eq_univ_iff_forall]
         Hint "
@@ -155,7 +160,7 @@ Statement : TopologicalSpace X := by
         "
         simp
         Hint "
-        Finally, let's `use` the set `V`.
+        To show this ex
         "
         use V
         Hint "

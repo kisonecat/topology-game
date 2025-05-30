@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu May 22 18:17:07 2025\n"
+"POT-Creation-Date: Fri May 30 16:15:43 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -384,13 +384,15 @@ msgstr ""
 #: Game.Levels.W02.L01
 msgid "Logically, we know that if `V` is not the empty set,\n"
 "then it must be `univ`. In Lean-speak, this means we should\n"
-"`have V_univ : V = univ := ?_`."
+"`have V_univ : V = univ := ?_` (where `:= ?_` means we promise to\n"
+"eventually provide a proof)."
 msgstr ""
 
 #: Game.Levels.W02.L01
 msgid "Now we're ready to `r`e`w`rite our goal using\n"
 "`eq_univ_iff_forall`, which is a useful characterization\n"
-"for when a set equals the universe."
+"for when a set equals the universe:\n"
+"`S = univ ↔ ∀ (x : X), x ∈ S`."
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -403,7 +405,7 @@ msgid "Lean can now `simp`lify our goal for us."
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "Finally, let's `use` the set `V`."
+msgid "To show this ex"
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -457,6 +459,32 @@ msgstr ""
 #: Game.Levels.W02.ExampleWorld
 msgid "Now let's try actually constructing some examples of\n"
 "topological spaces!"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "Mapping out of the discrete"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "yada yada"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "Our first task is to prove that every function\n"
+"from a *discrete* topological space to a topological space\n"
+"is continuous."
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "You did it!"
+msgstr ""
+
+#: Game.Levels.W03.ContinuityWorld
+msgid "Continuity World"
+msgstr ""
+
+#: Game.Levels.W03.ContinuityWorld
+msgid "Let's build maps between topological spaces."
 msgstr ""
 
 #: Game

@@ -19,7 +19,7 @@ TheoremDoc TopologicalSpace.mk as "TopologicalSpace.mk" in "Topology"
 TheoremDoc Set.eq_univ_iff_forall as "eq_univ_iff_forall" in "Set"
 NewTheorem TopologicalSpace.mk Set.eq_univ_iff_forall absurd
 
-NewTactic right left by_cases obtain «have» use
+NewTactic right left by_cases obtain «have» use constructor rcases
 
 open Set Topology
 variable {X : Type}
@@ -33,8 +33,8 @@ Statement : TopologicalSpace X := by
   be open, namely, it should equal the empty set or the universe.
   "
   Hint "
-  (To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)
-  (To type `↦`, type `\\mapsto` and then `[Space]` to autocomplete.)
+  (To type `∅`, type `\\empty` and then `[Space]` to autocomplete.
+  To type `↦`, type `\\map` and then `[Space]` to autocomplete.)
   "
   apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)
   · Hint "
@@ -160,11 +160,13 @@ Statement : TopologicalSpace X := by
         "
         simp
         Hint "
-        To show this ex
+        To show this existential claim, we need to produce the
+        witness `t`. To do this, `use` the appropriate object:
+        `x`, `X`, `U_col`, or `V`.
         "
         use V
         Hint "
-        We now need to prove a conjunction of
+        We now need to prove the conjunction of
         `V ∈ U_col` and `x ∈ V`. We can use the
         `constructor` tactic to split this into two
         subgoals.

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri May 30 15:56:54 2025\n"
+"POT-Creation-Date: Fri May 30 16:47:21 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -287,8 +287,8 @@ msgid "Our goal is just `TopologicalSpace X`: there exists a\n"
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)\n"
-"(To type `↦`, type `\\mapsto` and then `[Space]` to autocomplete.)"
+msgid "(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.\n"
+"To type `↦`, type `\\map` and then `[Space]` to autocomplete.)"
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -388,14 +388,15 @@ msgstr ""
 #: Game.Levels.W02.L01
 msgid "Logically, we know that if `V` is not the empty set,\n"
 "then it must be `univ`. In Lean-speak, this means we should\n"
-"`have V_univ : V = univ := ?_` (where `?_` means we promise to\n"
+"`have V_univ : V = univ := ?_` (where `:= ?_` means we promise to\n"
 "eventually provide a proof)."
 msgstr ""
 
 #: Game.Levels.W02.L01
 msgid "Now we're ready to `r`e`w`rite our goal using\n"
 "`eq_univ_iff_forall`, which is a useful characterization\n"
-"for when a set equals the universe."
+"for when a set equals the universe:\n"
+"`S = univ ↔ ∀ (x : X), x ∈ S`."
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -408,11 +409,13 @@ msgid "Lean can now `simp`lify our goal for us."
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "Finally, let's `use` the set `V`."
+msgid "To show this existential claim, we need to produce the\n"
+"witness `t`. To do this, `use` the appropriate object:\n"
+"`x`, `X`, `U_col`, or `V`."
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "We now need to prove a conjunction of\n"
+msgid "We now need to prove the conjunction of\n"
 "`V ∈ U_col` and `x ∈ V`. We can use the\n"
 "`constructor` tactic to split this into two\n"
 "subgoals."

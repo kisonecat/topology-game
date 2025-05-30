@@ -1,3 +1,5 @@
+import Game.Levels.W01.AxiomWorld
+import Game.Levels.W02.ExampleWorld
 import Game.Levels.W03.ContinuityWorld
 
 -- Here's what we'll put on the title screen

@@ -5,7 +5,7 @@ Level 1
 Title "Mapping out of the discrete"
 
 /-- yada yada -/
-TheoremDoc continuous_def as "continuous_def_lol" in "Continuity"
+TheoremDoc continuous_def as "continuous_def" in "Continuity"
 NewTheorem continuous_def
 
 Introduction "

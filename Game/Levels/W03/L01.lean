@@ -4,6 +4,10 @@ World "ContinuityWorld"
 Level 1
 Title "Mapping out of the discrete"
 
+/-- yada yada -/
+TheoremDoc continuous_def as "continuous_def_lol" in "Continuity"
+NewTheorem continuous_def
+
 Introduction "
 Our first task is to prove that every function
 from a *discrete* topological space to a topological space

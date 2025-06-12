@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri May 30 16:15:43 2025\n"
+"POT-Creation-Date: Thu Jun 12 14:09:58 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -283,8 +283,12 @@ msgid "Our goal is just `TopologicalSpace X`: there exists a\n"
 "topology on $X$. To do this directly, we will need to\n"
 "`apply TopologicalSpace.mk (fun U ↦ U = ∅ ∨ U = univ)`.\n"
 "Here, `U = ∅ ∨ U = univ` prepresents the requirements for a set to\n"
-"be open, namely, it should equal the empty set or the universe.\n"
-"(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.)"
+"be open, namely, it should equal the empty set or the universe."
+msgstr ""
+
+#: Game.Levels.W02.L01
+msgid "(To type `∅`, type `\\empty` and then `[Space]` to autocomplete.\n"
+"To type `↦`, type `\\map` and then `[Space]` to autocomplete.)"
 msgstr ""
 
 #: Game.Levels.W02.L01
@@ -405,11 +409,13 @@ msgid "Lean can now `simp`lify our goal for us."
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "To show this ex"
+msgid "To show this existential claim, we need to produce the\n"
+"witness `t`. To do this, `use` the appropriate object:\n"
+"`x`, `X`, `U_col`, or `V`."
 msgstr ""
 
 #: Game.Levels.W02.L01
-msgid "We now need to prove a conjunction of\n"
+msgid "We now need to prove the conjunction of\n"
 "`V ∈ U_col` and `x ∈ V`. We can use the\n"
 "`constructor` tactic to split this into two\n"
 "subgoals."
@@ -433,7 +439,8 @@ msgstr ""
 msgid "Recall that earlier we claimed that\n"
 "`V = univ`? It's now our job to justify it.\n"
 "This is almost `U_col_open V V_in_U_col`, which says\n"
-"`V = ∅ ∨ V = univ`. So let's use `rcases U_col_open V V_in_U_col`\n"
+"`V = ∅ ∨ V = univ`. So let's use\n"
+"`rcases U_col_open V V_in_U_col with V_empty|V_univ`\n"
 "to investigate each case."
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri May 30 16:47:21 2025\n"
+"POT-Creation-Date: Thu Jun 12 14:09:58 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -470,6 +470,10 @@ msgstr ""
 
 #: Game.Levels.W03.L01
 msgid "Mapping out of the discrete"
+msgstr ""
+
+#: Game.Levels.W03.L01
+msgid "yada yada"
 msgstr ""
 
 #: Game.Levels.W03.L01
